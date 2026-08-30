@@ -1,0 +1,176 @@
+:root {
+  --bg: #f2eae8;
+  --bg-panel: rgba(255, 255, 255, 0.4);
+  --fg: #4c4f69;
+  --muted: #8c8fa1;
+  --selection-bg: #acb0be;
+  --red: #d20f39;
+  --green: #40a02b;
+  --blue: #1e66f5;
+  --yellow: #df8e1d;
+  --cyan: #179299;
+  --purple: #ea76cb;
+  --black: #5c5f77;
+  --white: #acb0be;
+  --bright-white: #bcc0cc;
+  --cursor: #dc8a78;
+  --border: #ccd0da;
+  --panel: rgba(255, 255, 255, 0.4);
+  --active-row: #b8e3c9;
+  --flag-row: #f3b8be;
+  --radius: 6px;
+  --font: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+  /* 格子方法：外框 129 格宽 × 64 格高，正方形格子，组件缝隙/边距 = 1 格 */
+  --cell: calc(100% / 129);   /* 横向 1 格 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--fg);
+  background: var(--bg);
+  font-size: 13px;
+  overflow: hidden;
+}
+
+/* ========= 主网格：左 64 格 / 右 64 格（等宽），中间 1 格缝隙 ========= */
+.app {
+  display: grid;
+  grid-template-columns: minmax(0, 64fr) minmax(0, 64fr);
+  grid-template-rows: minmax(0, 1fr);
+  column-gap: var(--cell);
+  height: 100vh;
+  width: 100vw;
+  padding: var(--cell);
+}
+
+.app > .left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cell);
+  min-width: 0;
+  min-height: 0;
+}
+.app > .right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cell);
+  min-width: 0;
+  min-height: 0;
+}
+
+/* 左列：视频区(16:9 固定) + 字幕区(★纵向拉伸) */
+.video-slot {
+  flex: 0 0 auto;         /* 高度由 16:9 视频 + 控制条决定 */
+  min-width: 0;
+}
+.table-slot {
+  flex: 1 1 auto;         /* ★ 字幕区纵向拉伸 */
+  min-width: 0;
+  min-height: 0;
+}
+
+/* 右列：流程条(顶) + AI区(★拉伸) + 编辑区(底,固定) */
+.flow-slot {
+  flex: 0 0 44px;
+  min-width: 0;
+}
+.ai-slot {
+  flex: 1 1 auto;         /* ★ AI 对话区纵向拉伸 */
+  min-width: 0;
+  min-height: 0;
+}
+.lower-slot {
+  flex: 0 0 47%;          /* 频谱12格 + 编辑18格 ≈ 47% */
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.lower-slot > .sp {
+  flex: 0 0 calc(100vh * 12 / 64);   /* 频谱区 12 格高 */
+}
+.lower-slot > .se {
+  flex: 1 1 auto;
+}
+
+/* ================= Generic surface ================= */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+button {
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--fg);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+button:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--fg);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 6px;
+  outline: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--blue);
+}
+
+.boot-error {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+}
+.boot-loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
