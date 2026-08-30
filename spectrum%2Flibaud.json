@@ -1,0 +1,114 @@
+[
+  {
+    "name": "provider.cpp",
+    "path": "libaegisub/audio/provider.cpp",
+    "sha": "71cb81d00cdfad569f47012f383ca699efbc4c07",
+    "size": 5134,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/71cb81d00cdfad569f47012f383ca699efbc4c07",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/71cb81d00cdfad569f47012f383ca699efbc4c07",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider.cpp"
+    }
+  },
+  {
+    "name": "provider_convert.cpp",
+    "path": "libaegisub/audio/provider_convert.cpp",
+    "sha": "f7ae560cc9ac75fcf899f6548b55c8563086f777",
+    "size": 7311,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_convert.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_convert.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/f7ae560cc9ac75fcf899f6548b55c8563086f777",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider_convert.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_convert.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/f7ae560cc9ac75fcf899f6548b55c8563086f777",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_convert.cpp"
+    }
+  },
+  {
+    "name": "provider_dummy.cpp",
+    "path": "libaegisub/audio/provider_dummy.cpp",
+    "sha": "41b9c9cb2d50dce021490b1417bfb391c479346e",
+    "size": 2871,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_dummy.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_dummy.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/41b9c9cb2d50dce021490b1417bfb391c479346e",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider_dummy.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_dummy.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/41b9c9cb2d50dce021490b1417bfb391c479346e",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_dummy.cpp"
+    }
+  },
+  {
+    "name": "provider_hd.cpp",
+    "path": "libaegisub/audio/provider_hd.cpp",
+    "sha": "a5d529ce69ca306851ce076561d95485600213bd",
+    "size": 2884,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_hd.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_hd.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/a5d529ce69ca306851ce076561d95485600213bd",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider_hd.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_hd.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/a5d529ce69ca306851ce076561d95485600213bd",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_hd.cpp"
+    }
+  },
+  {
+    "name": "provider_lock.cpp",
+    "path": "libaegisub/audio/provider_lock.cpp",
+    "sha": "927eea767366917b295cd3b477fb40ac85996ea8",
+    "size": 1454,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_lock.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_lock.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/927eea767366917b295cd3b477fb40ac85996ea8",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider_lock.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_lock.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/927eea767366917b295cd3b477fb40ac85996ea8",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_lock.cpp"
+    }
+  },
+  {
+    "name": "provider_pcm.cpp",
+    "path": "libaegisub/audio/provider_pcm.cpp",
+    "sha": "100ec50803b387b8b86f8753945beab2ae861bd1",
+    "size": 8595,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_pcm.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_pcm.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/100ec50803b387b8b86f8753945beab2ae861bd1",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider_pcm.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_pcm.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/100ec50803b387b8b86f8753945beab2ae861bd1",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_pcm.cpp"
+    }
+  },
+  {
+    "name": "provider_ram.cpp",
+    "path": "libaegisub/audio/provider_ram.cpp",
+    "sha": "c4acbbdc11fa99d8d326425e1ee8682332273699",
+    "size": 3108,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_ram.cpp?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_ram.cpp",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/c4acbbdc11fa99d8d326425e1ee8682332273699",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/audio/provider_ram.cpp",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio/provider_ram.cpp?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/c4acbbdc11fa99d8d326425e1ee8682332273699",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/audio/provider_ram.cpp"
+    }
+  }
+]
