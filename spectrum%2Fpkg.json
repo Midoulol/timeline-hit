@@ -1,0 +1,258 @@
+[
+  {
+    "name": "16x16.png",
+    "path": "packages/desktop/16x16.png",
+    "sha": "7d5d58846b0a611580e9092c9084be8ffce42969",
+    "size": 895,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/16x16.png?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/16x16.png",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/7d5d58846b0a611580e9092c9084be8ffce42969",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/16x16.png",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/16x16.png?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/7d5d58846b0a611580e9092c9084be8ffce42969",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/16x16.png"
+    }
+  },
+  {
+    "name": "16x16",
+    "path": "packages/desktop/16x16",
+    "sha": "ff036a2e3f5118e83d731f8efc39d2bc548a2645",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/16x16?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/16x16",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/ff036a2e3f5118e83d731f8efc39d2bc548a2645",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/16x16?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/ff036a2e3f5118e83d731f8efc39d2bc548a2645",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/16x16"
+    }
+  },
+  {
+    "name": "22x22.png",
+    "path": "packages/desktop/22x22.png",
+    "sha": "74dd3f2c323ca003ad4f562745feaa9d55e1f250",
+    "size": 1315,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/22x22.png?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/22x22.png",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/74dd3f2c323ca003ad4f562745feaa9d55e1f250",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/22x22.png",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/22x22.png?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/74dd3f2c323ca003ad4f562745feaa9d55e1f250",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/22x22.png"
+    }
+  },
+  {
+    "name": "22x22",
+    "path": "packages/desktop/22x22",
+    "sha": "6dd77695b77ba5550cc04255fbc081409eb2b3f3",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/22x22?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/22x22",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/6dd77695b77ba5550cc04255fbc081409eb2b3f3",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/22x22?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/6dd77695b77ba5550cc04255fbc081409eb2b3f3",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/22x22"
+    }
+  },
+  {
+    "name": "24x24.png",
+    "path": "packages/desktop/24x24.png",
+    "sha": "f57623260d4f58fca6586388804b3d9a01fe4c15",
+    "size": 1502,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/24x24.png?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/24x24.png",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/f57623260d4f58fca6586388804b3d9a01fe4c15",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/24x24.png",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/24x24.png?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/f57623260d4f58fca6586388804b3d9a01fe4c15",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/24x24.png"
+    }
+  },
+  {
+    "name": "24x24",
+    "path": "packages/desktop/24x24",
+    "sha": "51e69bfd3e509d75e3e9ac544796d1471b50b23f",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/24x24?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/24x24",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/51e69bfd3e509d75e3e9ac544796d1471b50b23f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/24x24?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/51e69bfd3e509d75e3e9ac544796d1471b50b23f",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/24x24"
+    }
+  },
+  {
+    "name": "32x32.png",
+    "path": "packages/desktop/32x32.png",
+    "sha": "9d609d7a238f95de567e30d415d5dd5b590f7761",
+    "size": 2144,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/32x32.png?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/32x32.png",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/9d609d7a238f95de567e30d415d5dd5b590f7761",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/32x32.png",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/32x32.png?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/9d609d7a238f95de567e30d415d5dd5b590f7761",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/32x32.png"
+    }
+  },
+  {
+    "name": "32x32",
+    "path": "packages/desktop/32x32",
+    "sha": "009cea83507945beead8bf84fd6b3279f36d6546",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/32x32?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/32x32",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/009cea83507945beead8bf84fd6b3279f36d6546",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/32x32?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/009cea83507945beead8bf84fd6b3279f36d6546",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/32x32"
+    }
+  },
+  {
+    "name": "48x48.png",
+    "path": "packages/desktop/48x48.png",
+    "sha": "c4f163c215e29d2c7b53295db01b48a458f6662f",
+    "size": 3563,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/48x48.png?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/48x48.png",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/c4f163c215e29d2c7b53295db01b48a458f6662f",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/48x48.png",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/48x48.png?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/c4f163c215e29d2c7b53295db01b48a458f6662f",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/48x48.png"
+    }
+  },
+  {
+    "name": "48x48",
+    "path": "packages/desktop/48x48",
+    "sha": "2b3de7103bcd39d64e3c7dfb5cf0a1161b51b090",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/48x48?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/48x48",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/2b3de7103bcd39d64e3c7dfb5cf0a1161b51b090",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/48x48?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/2b3de7103bcd39d64e3c7dfb5cf0a1161b51b090",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/48x48"
+    }
+  },
+  {
+    "name": "64x64.png",
+    "path": "packages/desktop/64x64.png",
+    "sha": "fbbd14dc9f46796622c457b781c1388d45353788",
+    "size": 5030,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/64x64.png?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/64x64.png",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/fbbd14dc9f46796622c457b781c1388d45353788",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/64x64.png",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/64x64.png?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/fbbd14dc9f46796622c457b781c1388d45353788",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/64x64.png"
+    }
+  },
+  {
+    "name": "64x64",
+    "path": "packages/desktop/64x64",
+    "sha": "3fafaa723a8dcc59292f093bf6ed2c00ba4c4345",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/64x64?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/64x64",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/3fafaa723a8dcc59292f093bf6ed2c00ba4c4345",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/64x64?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/3fafaa723a8dcc59292f093bf6ed2c00ba4c4345",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/64x64"
+    }
+  },
+  {
+    "name": "aegisub.desktop.in.in",
+    "path": "packages/desktop/aegisub.desktop.in.in",
+    "sha": "e9590e1098bae215407a88fe0339fbe514e91c9e",
+    "size": 458,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/aegisub.desktop.in.in?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/aegisub.desktop.in.in",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/e9590e1098bae215407a88fe0339fbe514e91c9e",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/aegisub.desktop.in.in",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/aegisub.desktop.in.in?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/e9590e1098bae215407a88fe0339fbe514e91c9e",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/aegisub.desktop.in.in"
+    }
+  },
+  {
+    "name": "aegisub.metainfo.xml.in.in",
+    "path": "packages/desktop/aegisub.metainfo.xml.in.in",
+    "sha": "c0c61a5b54d4d27f00a41e847b1b5d232807b1d0",
+    "size": 8227,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/aegisub.metainfo.xml.in.in?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/aegisub.metainfo.xml.in.in",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/c0c61a5b54d4d27f00a41e847b1b5d232807b1d0",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/aegisub.metainfo.xml.in.in",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/aegisub.metainfo.xml.in.in?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/c0c61a5b54d4d27f00a41e847b1b5d232807b1d0",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/aegisub.metainfo.xml.in.in"
+    }
+  },
+  {
+    "name": "scalable.svg",
+    "path": "packages/desktop/scalable.svg",
+    "sha": "e0dfeadb6ccc4f223a100b06a5a45b9629ce8888",
+    "size": 14769,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/scalable.svg?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/scalable.svg",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/e0dfeadb6ccc4f223a100b06a5a45b9629ce8888",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/packages/desktop/scalable.svg",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/scalable.svg?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/e0dfeadb6ccc4f223a100b06a5a45b9629ce8888",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/packages/desktop/scalable.svg"
+    }
+  },
+  {
+    "name": "scalable",
+    "path": "packages/desktop/scalable",
+    "sha": "00ca86cd2f734555e16585321b8c7d959507922a",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/scalable?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/scalable",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/00ca86cd2f734555e16585321b8c7d959507922a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/packages/desktop/scalable?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/00ca86cd2f734555e16585321b8c7d959507922a",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/packages/desktop/scalable"
+    }
+  }
+]
