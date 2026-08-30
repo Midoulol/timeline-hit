@@ -1,0 +1,49 @@
+.sp {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: #101018;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 频谱图/波形画布（含顶部刻度尺，由组件绘制） */
+.sp-canvas {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  background: #101018;
+}
+
+/* 工具栏（播放 / 模式 / 平滑） */
+.sp-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  flex: 0 0 auto;
+  background: #1b1b24;
+  border-top: 1px solid #2a2a3a;
+}
+.sp-btn {
+  background: #2a2a3a;
+  color: #d8d8e0;
+  border: 1px solid #3a3a4a;
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.sp-btn:hover {
+  border-color: #6ad0ff;
+  color: #6ad0ff;
+}
+.sp-decay {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #8a8a9a;
+  margin-left: auto;
+}
