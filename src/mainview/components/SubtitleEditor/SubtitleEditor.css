@@ -1,0 +1,160 @@
+/* 编辑器：左列(工具栏+内容) + 右列(独立时间面板) */
+.se {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 8px;
+  height: 100%;
+  min-height: 0;
+  padding: 6px 8px;
+}
+.se-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-align: center;
+}
+
+.se-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+  min-width: 0;
+}
+
+/* 工具栏（仅左侧上方） */
+.se-toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+.se-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.se-tags {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.se-tags .tag,
+.se-style-btn {
+  padding: 2px 6px;
+}
+.se-tags .tag {
+  min-width: 22px;
+  font-weight: 600;
+}
+.color-token {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--border);
+}
+.se-count {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.se-count span {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.se-style-panel {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  padding: 4px 6px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+.se-style-panel input {
+  width: 80px;
+}
+
+.se-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+}
+.se-textarea {
+  flex: 1 1 auto;
+  resize: none;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 右列：独立时间面板 */
+.se-side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-panel);
+}
+.se-checks {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  flex: 0 0 auto;
+}
+.se-checks label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.se-mark {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.se-flag-btn.on {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+.se-flag-block {
+  width: 40px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg-panel);
+}
+.se-flag-block.on {
+  background: var(--red);
+}
+
+.se-time {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+}
+.se-time label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  white-space: nowrap;
+  justify-content: flex-end;
+}
+.se-time input {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
