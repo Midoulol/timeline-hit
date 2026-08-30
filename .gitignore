@@ -1,0 +1,10 @@
+node_modules/
+.hutch/
+dist/
+.data/
+.out/
+*.db
+bun.lock
+hutch.lock
+build/
+.data/
