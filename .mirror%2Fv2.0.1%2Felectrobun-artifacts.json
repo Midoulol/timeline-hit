@@ -1,0 +1,87 @@
+{
+	"schemaVersion": 1,
+	"product": {
+		"name": "electrobun",
+		"version": "2.0.1"
+	},
+	"devkit": {
+		"manifest": "native-devkit.json",
+		"schemaVersion": 1
+	},
+	"abi": {
+		"core": {
+			"name": "electrobun-core",
+			"version": 1
+		},
+		"sdk": {
+			"name": "electrobun-sdk",
+			"version": 1
+		}
+	},
+	"platforms": {
+		"linux-arm64": {
+			"target": {
+				"os": "linux",
+				"arch": "arm64"
+			},
+			"core": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-core-linux-arm64.tar.gz",
+				"size": 19639514,
+				"sha256": "025b084383839809af8d2d5397485cfb94d4098fbbdf65ab8cdf6ec8adab2ed3"
+			},
+			"cef": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-cef-linux-arm64.tar.gz",
+				"size": 167196457,
+				"sha256": "f1a32f3a8bd8cb64ca10a392f1de0750139ecdae4e16fb929fe703c383a1120d"
+			}
+		},
+		"linux-x64": {
+			"target": {
+				"os": "linux",
+				"arch": "x64"
+			},
+			"core": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-core-linux-x64.tar.gz",
+				"size": 20303284,
+				"sha256": "29da550b3cb30c0b868b6155aa35b791548baa044f97118951e1c7a413c95307"
+			},
+			"cef": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-cef-linux-x64.tar.gz",
+				"size": 164398517,
+				"sha256": "055073368a4d10e9dd7861f5a79126dab33612a3268c3b2fed69b71d1d985155"
+			}
+		},
+		"macos-arm64": {
+			"target": {
+				"os": "macos",
+				"arch": "arm64"
+			},
+			"core": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-core-darwin-arm64.tar.gz",
+				"size": 5639655,
+				"sha256": "2d10d46a7716e3fafee9a9fecb13eb8d78531e312fd0d792db85a1d7899a12b2"
+			},
+			"cef": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-cef-darwin-arm64.tar.gz",
+				"size": 131261403,
+				"sha256": "a89a393357f4a484175e32ccd134fec6616293d809492ae57662a7d224c7cf0b"
+			}
+		},
+		"windows-x64": {
+			"target": {
+				"os": "win",
+				"arch": "x64"
+			},
+			"core": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-core-win-x64.tar.gz",
+				"size": 10492653,
+				"sha256": "b0251163afc64c622a92c26fa37281d637ae83503e89396e581e618572494e0a"
+			},
+			"cef": {
+				"url": "https://github.com/blackboardsh/electrobun/releases/download/v2.0.1/electrobun-cef-win-x64.tar.gz",
+				"size": 169153850,
+				"sha256": "041a3823756821947da1d8f0febf9c9734da613ef2a5307c616b93eecade8af1"
+			}
+		}
+	}
+}
