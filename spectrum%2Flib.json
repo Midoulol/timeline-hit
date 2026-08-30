@@ -1,0 +1,146 @@
+[
+  {
+    "name": "ass",
+    "path": "libaegisub/ass",
+    "sha": "1b4654c25e0a42de0b8f09a3591b744e13ff521b",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/ass?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/ass",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/1b4654c25e0a42de0b8f09a3591b744e13ff521b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/ass?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/1b4654c25e0a42de0b8f09a3591b744e13ff521b",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/ass"
+    }
+  },
+  {
+    "name": "audio",
+    "path": "libaegisub/audio",
+    "sha": "eb6b56d1f563064dcc6107555ba4e31dcc3130e5",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/audio",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/eb6b56d1f563064dcc6107555ba4e31dcc3130e5",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/audio?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/eb6b56d1f563064dcc6107555ba4e31dcc3130e5",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/audio"
+    }
+  },
+  {
+    "name": "common",
+    "path": "libaegisub/common",
+    "sha": "0ce234b063e78ca863f086cab2c1f7e94aeb3519",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/common?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/common",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/0ce234b063e78ca863f086cab2c1f7e94aeb3519",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/common?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/0ce234b063e78ca863f086cab2c1f7e94aeb3519",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/common"
+    }
+  },
+  {
+    "name": "include",
+    "path": "libaegisub/include",
+    "sha": "bc1dbd6daf52fd51aaefcfce82ae46629ec351b6",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/include?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/include",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/bc1dbd6daf52fd51aaefcfce82ae46629ec351b6",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/include?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/bc1dbd6daf52fd51aaefcfce82ae46629ec351b6",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/include"
+    }
+  },
+  {
+    "name": "lua",
+    "path": "libaegisub/lua",
+    "sha": "2ee09e463cba29e08af242d367a716e8e0a69ba9",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/lua?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/lua",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/2ee09e463cba29e08af242d367a716e8e0a69ba9",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/lua?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/2ee09e463cba29e08af242d367a716e8e0a69ba9",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/lua"
+    }
+  },
+  {
+    "name": "meson.build",
+    "path": "libaegisub/meson.build",
+    "sha": "9663facc79cae7eaa4742c61cd79a18a1569e988",
+    "size": 2562,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/meson.build?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/meson.build",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/9663facc79cae7eaa4742c61cd79a18a1569e988",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/libaegisub/meson.build",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/meson.build?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/9663facc79cae7eaa4742c61cd79a18a1569e988",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/libaegisub/meson.build"
+    }
+  },
+  {
+    "name": "osx",
+    "path": "libaegisub/osx",
+    "sha": "2854ac325a2d2332f38ee2a18928e7d64b2876d1",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/osx?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/osx",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/2854ac325a2d2332f38ee2a18928e7d64b2876d1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/osx?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/2854ac325a2d2332f38ee2a18928e7d64b2876d1",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/osx"
+    }
+  },
+  {
+    "name": "unix",
+    "path": "libaegisub/unix",
+    "sha": "caf9230a7e48ee43af88e57c66c3d6b1ae8d5059",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/unix?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/unix",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/caf9230a7e48ee43af88e57c66c3d6b1ae8d5059",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/unix?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/caf9230a7e48ee43af88e57c66c3d6b1ae8d5059",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/unix"
+    }
+  },
+  {
+    "name": "windows",
+    "path": "libaegisub/windows",
+    "sha": "f490d6d4f9568733a216c5961b2d578e7bd8fb2f",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/windows?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/windows",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/f490d6d4f9568733a216c5961b2d578e7bd8fb2f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/libaegisub/windows?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/f490d6d4f9568733a216c5961b2d578e7bd8fb2f",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/libaegisub/windows"
+    }
+  }
+]
