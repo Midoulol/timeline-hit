@@ -1,0 +1,111 @@
+.vp {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: calc(100% / 70);
+  padding: calc(100% / 70);
+}
+
+.vp-video {
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* 保证视频播放区恒为 16:9，随窗口等比 */
+  object-fit: contain;
+  background: #1a1a22;
+  border-radius: 4px;
+}
+
+/* 进度条：占满宽度 */
+.vp-progress {
+  position: relative;
+  height: 12px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.vp-progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--yellow);
+  border-radius: 6px;
+}
+.vp-progress-knob {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  background: var(--cursor);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+
+/* 控制栏：进度条全宽，9 按钮单行，宽度按格子分档（1-5 小 / 6-7 中 / 8-9 大） */
+.vp-controls {
+  display: flex;
+  align-items: center;
+  gap: calc(100% / 70);
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+}
+/* 1-5 小按钮 */
+.vp-btn,
+.vp-vol {
+  flex: 4 1 0;
+  height: 30px;
+  min-width: 38px;   /* 1-5 小按钮等宽 */
+}
+.vp-btn {
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 6-7 中（当前帧/当前时间）*/
+.vp-display {
+  flex: 13 1 0;
+  height: 30px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-panel);
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 8-9 大（倍速 / 加载视频）*/
+.vp-speed,
+.vp-load {
+  flex: 18 1 0;
+}
+
+.vp-vol {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.vp-vol > .vp-btn {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.vp-vol-slider {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 110px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 6px;
+  z-index: 5;
+}
+.vp-hint {
+  font-size: 11px;
+  color: var(--muted);
+}
