@@ -1,0 +1,61 @@
+.ai {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 6px;
+  padding: 8px;
+}
+.ai-messages {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ai-bubble {
+  max-width: 70%;
+  padding: 6px 10px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 12px;
+}
+.ai-bubble.user {
+  align-self: flex-end;
+  background: var(--blue);
+  color: #ffffff;
+}
+.ai-bubble.assistant {
+  align-self: flex-start;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+}
+.ai-input-row {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+.ai-input {
+  flex: 1 1 auto;
+}
+.ai-settings {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+.ai-settings label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.ai-settings input {
+  width: 110px;
+}
+.ai-key input {
+  width: 140px;
+}
