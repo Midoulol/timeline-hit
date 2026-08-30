@@ -1,0 +1,98 @@
+[
+  {
+    "name": "art-sources",
+    "path": "docs/art-sources",
+    "sha": "1b4740a49b5995b3e509a07a1e9de5f9d82f0c91",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/art-sources?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/art-sources",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/1b4740a49b5995b3e509a07a1e9de5f9d82f0c91",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/art-sources?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/1b4740a49b5995b3e509a07a1e9de5f9d82f0c91",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/art-sources"
+    }
+  },
+  {
+    "name": "developer_docs.md",
+    "path": "docs/developer_docs.md",
+    "sha": "bf314f15d57f21a4e1ef8e533fadd811827a4e43",
+    "size": 1968,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/developer_docs.md?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/docs/developer_docs.md",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/bf314f15d57f21a4e1ef8e533fadd811827a4e43",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/docs/developer_docs.md",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/developer_docs.md?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/bf314f15d57f21a4e1ef8e533fadd811827a4e43",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/docs/developer_docs.md"
+    }
+  },
+  {
+    "name": "doxygen.cfg",
+    "path": "docs/doxygen.cfg",
+    "sha": "d84418b98afd27daf8a161b6f5b68d917c1f5be9",
+    "size": 136573,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/doxygen.cfg?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/blob/master/docs/doxygen.cfg",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/d84418b98afd27daf8a161b6f5b68d917c1f5be9",
+    "download_url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/master/docs/doxygen.cfg",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/doxygen.cfg?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/blobs/d84418b98afd27daf8a161b6f5b68d917c1f5be9",
+      "html": "https://github.com/TypesettingTools/Aegisub/blob/master/docs/doxygen.cfg"
+    }
+  },
+  {
+    "name": "generated",
+    "path": "docs/generated",
+    "sha": "a693005f7729b26798487769ef5515979ef2bd6f",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/generated?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/generated",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/a693005f7729b26798487769ef5515979ef2bd6f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/generated?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/a693005f7729b26798487769ef5515979ef2bd6f",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/generated"
+    }
+  },
+  {
+    "name": "specs",
+    "path": "docs/specs",
+    "sha": "c9b616a4b4dda1d5f72114d313d7d969183b2f0e",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/specs?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/specs",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/c9b616a4b4dda1d5f72114d313d7d969183b2f0e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/specs?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/c9b616a4b4dda1d5f72114d313d7d969183b2f0e",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/specs"
+    }
+  },
+  {
+    "name": "wiki_convert",
+    "path": "docs/wiki_convert",
+    "sha": "376b53ce7c0a6bcb6bf04219397aa8be7cb61514",
+    "size": 0,
+    "url": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/wiki_convert?ref=master",
+    "html_url": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/wiki_convert",
+    "git_url": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/376b53ce7c0a6bcb6bf04219397aa8be7cb61514",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/TypesettingTools/Aegisub/contents/docs/wiki_convert?ref=master",
+      "git": "https://api.github.com/repos/TypesettingTools/Aegisub/git/trees/376b53ce7c0a6bcb6bf04219397aa8be7cb61514",
+      "html": "https://github.com/TypesettingTools/Aegisub/tree/master/docs/wiki_convert"
+    }
+  }
+]
