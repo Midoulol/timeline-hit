@@ -3,6 +3,8 @@ import { bridge } from "../../bridge";
 import { audioBus } from "../../audioBus";
 import { useStore } from "../../store/useStore";
 import { formatClock, msToFrame } from "../../../shared/time";
+import { singleLineText } from "../../../shared/types";
+import { VideoDecodeClient } from "../../videoDecodeClient";
 import "./VideoPlayer.css";
 
 // Control bar per the design: 1播放 2当前字幕播放 3暂停 4停止 5音量(下拉)
@@ -12,6 +14,8 @@ const SPEEDS = [0.5, 1, 1.25, 1.5, 2];
 export default function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
+  const frameCanvasRef = useRef<HTMLCanvasElement>(null);
+  const decodeRef = useRef<VideoDecodeClient | null>(null);
   const [src, setSrc] = useState("");
   const [duration, setDuration] = useState(0);
   const [pos, setPos] = useState(0); // smooth current time (ms) via rAF
@@ -19,11 +23,14 @@ export default function VideoPlayer() {
   const [volOpen, setVolOpen] = useState(false);
   const [speedIdx, setSpeedIdx] = useState(1); // index into SPEEDS
   const [loaded, setLoaded] = useState(false);
+  const [srcPath, setSrcPath] = useState<string | null>(null);
+  const [useDecode, setUseDecode] = useState(false); // HEVC -> ffmpeg frame canvas
 
   const isPlaying = useStore((s) => s.isPlaying);
   const activeRowId = useStore((s) => s.activeRowId);
   const fps = useStore((s) => s.fps);
   const doc = useStore((s) => s.doc);
+  const videoTimeMs = useStore((s) => s.videoTimeMs);
   const setPlaying = useStore((s) => s.setPlaying);
   const setVideoTime = useStore((s) => s.setVideoTime);
   const setVideoDuration = useStore((s) => s.setVideoDuration);
@@ -31,7 +38,10 @@ export default function VideoPlayer() {
   const loadDefault = useCallback(async () => {
     try {
       const { path } = await bridge.getDefaultVideo();
-      if (path) setSrc(bridge.mediaUrl(path));
+      if (path) {
+        setSrcPath(path);
+        setSrc(bridge.mediaUrl(path));
+      }
     } catch {
       /* no default video */
     }
@@ -39,7 +49,9 @@ export default function VideoPlayer() {
 
   const loadVideo = useCallback(async () => {
     const { path } = await bridge.pickVideo();
-    if (path) setSrc(bridge.mediaUrl(path));
+    if (!path) return;
+    setSrcPath(path);
+    setSrc(bridge.mediaUrl(path)); // try direct playback first (works if WebView2 can decode)
   }, []);
 
   useEffect(() => {
@@ -68,6 +80,33 @@ export default function VideoPlayer() {
     return () => cancelAnimationFrame(raf);
   }, [video, src]);
 
+  // B2: for videos the <video> can't decode natively (HEVC), connect the ffmpeg
+  // frame stream and draw it on the overlay canvas (audio still comes from <video>).
+  useEffect(() => {
+    if (!useDecode || !srcPath) {
+      decodeRef.current?.close();
+      decodeRef.current = null;
+      return;
+    }
+    const canvas = frameCanvasRef.current;
+    if (!canvas) return;
+    let cancelled = false;
+    const client = new VideoDecodeClient();
+    decodeRef.current = client;
+    client.attach(canvas);
+    client
+      .connect(bridge.baseUrl, srcPath)
+      .then(() => {
+                  if (!cancelled) client.begin();
+      })
+      .catch(() => { /* ffmpeg missing, etc. */ });
+    return () => {
+      cancelled = true;
+      client.close();
+      decodeRef.current = null;
+    };
+  }, [src, srcPath, useDecode]);
+
   const onTimeUpdate = () => {
     if (video) {
       setVideoTime(video.currentTime * 1000);
@@ -77,6 +116,7 @@ export default function VideoPlayer() {
 
   const seekTo = (ms: number) => {
     if (video && duration > 0) video.currentTime = Math.min(Math.max(0, ms) / 1000, duration / 1000);
+    if (useDecode) decodeRef.current?.seek(ms);
   };
 
   const onProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -87,7 +127,7 @@ export default function VideoPlayer() {
   };
 
   // Button behaviors (1-5, 8-9).
-    const play = () => {
+  const play = () => {
     audioBus.resume(); // within the click gesture, so the graph runs and video advances
     video?.play();
   };
@@ -98,7 +138,7 @@ export default function VideoPlayer() {
   };
   const playCurrentSubtitle = () => {
     const row = doc?.rows.find((r) => r.id === activeRowId);
-        if (row) seekTo(row.startMs);
+    if (row) seekTo(row.startMs);
     audioBus.resume();
     video?.play();
   };
@@ -115,25 +155,41 @@ export default function VideoPlayer() {
 
   const pct = duration > 0 ? Math.min(100, (pos / duration) * 100) : 0;
 
+  // Subtitle overlay onto the video: the row active at the current playback time.
+  const subRow = doc?.rows.find((r) => videoTimeMs >= r.startMs && videoTimeMs < r.endMs);
+  const currentSubText = subRow ? singleLineText(subRow.text) : null;
+
   return (
     <div className="vp">
-      <video
-        ref={videoRef}
-        className="vp-video"
-        src={src}
-                crossOrigin="anonymous"
-        onLoadedMetadata={(e) => {
-          setDuration(e.currentTarget.duration * 1000);
-          setVideoDuration(e.currentTarget.duration * 1000);
-          setLoaded(true);
-        }}
-        onTimeUpdate={onTimeUpdate}
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
-        onEnded={() => setPlaying(false)}
-        controls={false}
-        preload="metadata"
-      />
+      <div className="vp-screen">
+        <video
+          ref={videoRef}
+          className="vp-video"
+          src={src}
+          crossOrigin="anonymous"
+          onLoadedMetadata={(e) => {
+            const v = e.currentTarget;
+            setDuration(v.duration * 1000);
+            setVideoDuration(v.duration * 1000);
+            setUseDecode(v.videoWidth === 0 && !!srcPath);
+            setLoaded(true);
+          }}
+          onTimeUpdate={onTimeUpdate}
+          onPlay={() => {
+            setPlaying(true);
+            if (useDecode) decodeRef.current?.play();
+          }}
+          onPause={() => {
+            setPlaying(false);
+            if (useDecode) decodeRef.current?.pause();
+          }}
+          onEnded={() => setPlaying(false)}
+          controls={false}
+          preload="metadata"
+        />
+        {useDecode && <canvas ref={frameCanvasRef} className="vp-frame-canvas" />}
+        {currentSubText && <div className="vp-subtitle">{currentSubText}</div>}
+      </div>
 
       {/* 进度条：默认设计 */}
       <div className="vp-progress" ref={progressRef} onClick={onProgressClick} title="进度条(点击定位)">

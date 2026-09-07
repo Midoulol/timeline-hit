@@ -3,6 +3,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { bridge } from "../../bridge";
 import { singleLineText, stripAssTags, cpsForRow } from "../../../shared/types";
 import { formatAssTimestamp } from "../../../shared/time";
+import { parseAss } from "../../../shared/ass";
+import { parseSrt } from "../../../shared/srt";
+import { findRangesInPlain } from "../../../shared/find";
 import { useStore } from "../../store/useStore";
 import { renderColoredText } from "../../renderText";
 import { ContextMenu, MenuItem } from "./ContextMenu";
@@ -25,22 +28,29 @@ export default function SubtitleTable() {
   const setSelected = useStore((s) => s.setSelected);
   const toggleSelected = useStore((s) => s.toggleSelected);
   const setSearch = useStore((s) => s.setSearch);
+  const highlightQuery = useStore((s) => s.highlightQuery);
+  const highlightRegex = useStore((s) => s.highlightRegex);
+  const setHighlight = useStore((s) => s.setHighlight);
+  const setHighlightRegex = useStore((s) => s.setHighlightRegex);
   const setDoc = useStore((s) => s.setDoc);
   const applyOp = useStore((s) => s.applyOp);
   const insertTranscription = useStore((s) => s.insertTranscription);
   const updateRow = useStore((s) => s.updateRow);
   const setClipboard = useStore((s) => s.setClipboard);
   const requestSeek = useStore((s) => s.requestSeek);
+  const replaceAll = useStore((s) => s.replaceAll);
   const filePath = useStore((s) => s.filePath);
   const setDirty = useStore((s) => s.setDirty);
 
   const [menu, setMenu] = useState<{ x: number; y: number } | null>(null);
   const [sttBusy, setSttBusy] = useState(false);
+   const [replaceMode, setReplaceMode] = useState(false);
+  const [replaceQuery, setReplaceQuery] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
-
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const rows = doc?.rows ?? [];
-
-  // Auto-scroll to the active row (current edit / playback row).
+ 
+   // Auto-scroll to the active row (current edit / playback row).
   useEffect(() => {
     if (activeRowId == null || !scrollRef.current) return;
     const el = scrollRef.current.querySelector<HTMLElement>(`[data-row-id="${activeRowId}"]`);
@@ -55,16 +65,22 @@ export default function SubtitleTable() {
     );
   }, [rows, q]);
 
-  const loadSubtitle = useCallback(async () => {
-    const res = await bridge.pickSubtitle();
-    if (!res.canceled && res.path) {
-      const { ok, doc, error } = await bridge.loadAss(res.path);
-      if (ok && doc) setDoc(doc, res.path);
-      else alert(error ?? "载入失败");
-    } else if (res.error) {
-      alert(res.error);
-    }
-  }, [setDoc]);
+  const computeHighlightRanges = useCallback(
+    (plain: string): Array<[number, number]> => findRangesInPlain(plain, highlightQuery, highlightRegex),
+    [highlightQuery, highlightRegex],
+  );
+
+  const onFileChosen = useCallback(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const f = e.target.files?.[0];
+      e.target.value = ""; // allow re-selecting the same file
+      if (!f) return;
+      const text = await f.text();
+      const doc = /\.srt$/i.test(f.name) ? parseSrt(text, f.name) : parseAss(text, f.name);
+      setDoc(doc, f.name);
+    },
+    [setDoc],
+  );
 
   const save = useCallback(async () => {
     if (!doc) return;
@@ -125,11 +141,25 @@ export default function SubtitleTable() {
   return (
     <div className="st">
       <div className="st-toolbar">
-        <button onClick={loadSubtitle} title="载入字幕文件（.ass/.srt）">
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".ass,.srt"
+          style={{ display: "none" }}
+          onChange={onFileChosen}
+        />
+        <button onClick={() => fileInputRef.current?.click()} title="载入字幕文件（.ass/.srt）">
           载入字幕
         </button>
         <button onClick={save} title="保存当前字幕">
           保存
+        </button>
+        <button
+          className={replaceMode ? "st-replace st-replace-on" : "st-replace"}
+          onClick={() => setReplaceMode((m) => !m)}
+          title="搜索 ↔ 替换切换"
+        >
+          {replaceMode ? "搜索" : "替换"}
         </button>
         <input
           className="st-search"
@@ -137,16 +167,44 @@ export default function SubtitleTable() {
           value={searchQuery}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button onClick={() => requestSeek(0)} title="回到开始">
-          0:00
+        <input
+          className="st-search st-highlight"
+          placeholder="高亮文本 (Ctrl+F)…"
+          value={highlightQuery}
+          onChange={(e) => setHighlight(e.target.value)}
+        />
+        <button
+          className={highlightRegex ? "st-regex st-regex-on" : "st-regex"}
+          onClick={() => setHighlightRegex(!highlightRegex)}
+          title="正则表达式开/关（作用于高亮栏）"
+        >
+          {highlightRegex ? "正则:开" : "正则:关"}
         </button>
         <button onClick={whisperImport} disabled={sttBusy} title="从 Whisper 导入识别结果">
           {sttBusy ? "识别中…" : "导入识别"}
         </button>
         <span className="st-count">{rows.length} 行</span>
       </div>
-
-      <div className="st-scroll" ref={scrollRef} onKeyDown={onKeyDown} tabIndex={0}>
+ 
+       {replaceMode && (
+         <div className="st-replace-row">
+           <span className="st-replace-label">替换为</span>
+           <input
+             className="st-search"
+             value={replaceQuery}
+             onChange={(e) => setReplaceQuery(e.target.value)}
+             onKeyDown={(e) => {
+               if (e.key === "Enter") replaceAll(highlightQuery, replaceQuery, highlightRegex);
+             }}
+             placeholder="替换为…"
+           />
+           <button onClick={() => replaceAll(highlightQuery, replaceQuery, highlightRegex)} title="替换所有匹配">
+             替换
+           </button>
+         </div>
+       )}
+ 
+       <div className="st-scroll" ref={scrollRef} onKeyDown={onKeyDown} tabIndex={0}>
         {rows.length === 0 ? (
           <div className="st-empty">没有字幕。点击「载入字幕」或从 Whisper 导入。</div>
         ) : (
@@ -190,7 +248,7 @@ export default function SubtitleTable() {
                     <td>{r.style}</td>
                     <td className="c-char">{r.character}</td>
                     <td className="c-text" title={stripAssTags(r.text)}>
-                      {renderColoredText(r.text)}
+                      {renderColoredText(r.text, computeHighlightRanges)}
                     </td>
                     <td className="c-flag">{r.flagged ? "⚑" : ""}</td>
                   </tr>

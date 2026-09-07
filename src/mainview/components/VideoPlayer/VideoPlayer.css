@@ -6,14 +6,49 @@
   padding: calc(100% / 70);
 }
 
-.vp-video {
-  flex: 0 0 auto;
-  width: 100%;
-  aspect-ratio: 16 / 9;   /* 保证视频播放区恒为 16:9，随窗口等比 */
-  object-fit: contain;
-  background: #1a1a22;
-  border-radius: 4px;
-}
+ /* 视频画面容器：相对定位，作为字幕叠层的锚点 */
+ .vp-screen {
+   position: relative;
+   width: 100%;
+   aspect-ratio: 16 / 9;
+   flex: 0 0 auto;
+ }
+ .vp-video {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   background: #1a1a22;
+   border-radius: 4px;
+ }
+ /* 字幕叠加：底部居中，白字深描边 */
+ .vp-subtitle {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 5%;
+   text-align: center;
+   color: #ffffff;
+   font-size: clamp(14px, 2.2vw, 26px);
+   font-weight: 600;
+   line-height: 1.35;
+   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 0 8px rgba(0, 0, 0, 0.7);
+   pointer-events: none;
+   white-space: pre-wrap;
+   padding: 0 10px;
+   z-index: 2;
+ }
+ /* HEVC 帧预览：覆盖黑画面，显示 ffmpeg 解码的当前帧 */
+ .vp-frame-canvas {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+   background: #1a1a22;
+   z-index: 1;
+ }
 
 /* 进度条：占满宽度 */
 .vp-progress {

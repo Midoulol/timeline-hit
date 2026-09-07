@@ -47,6 +47,19 @@ export const bridge = {
   pickVideo(): Promise<{ canceled: boolean; path?: string }> {
     return postJSON("/api/pick-video", {});
   },
+    prepareVideo(path: string): Promise<{ ok: boolean; path?: string; error?: string }> {
+    return postJSON("/api/prepare-video", { path });
+  },
+  /** Decode the video frame at `tMs` (HEVC-capable) and return an object URL. */
+  async frame(path: string, tMs: number): Promise<string | null> {
+    const res = await fetch(`${BASE}/api/frame`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ path, tMs }),
+    });
+    if (!res.ok) return null;
+    return URL.createObjectURL(await res.blob());
+  },
   getDefaultVideo(): Promise<{ path: string | null }> {
     return getJSON("/api/default/video");
   },

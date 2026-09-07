@@ -3,6 +3,7 @@
 import { create } from 'zustand';
 import type { DeepSeekSettings, SubtitleDoc, SubtitleRow, TranscriptionSegment } from '../../shared/types';
 import type { OpResult } from '../../shared/ops';
+import { replaceInText } from '../../shared/find';
 
 interface AppState {
   // document
@@ -25,6 +26,8 @@ interface AppState {
   activeRowId: number | null;
   selectedIds: number[];
   searchQuery: string;
+  highlightQuery: string;
+  highlightRegex: boolean;
 
   // flow
   flowStep: number;
@@ -44,6 +47,7 @@ interface AppState {
   setDirty: (d: boolean) => void;
   updateRow: (id: number, patch: Partial<SubtitleRow>) => void;
   setRows: (rows: SubtitleRow[]) => void;
+  replaceAll: (find: string, replacement: string, regex: boolean) => void;
   applyOp: (res: OpResult) => void;
   insertTranscription: (segments: TranscriptionSegment[]) => void;
 
@@ -58,6 +62,8 @@ interface AppState {
   setSelected: (ids: number[]) => void;
   toggleSelected: (id: number) => void;
   setSearch: (q: string) => void;
+  setHighlight: (q: string) => void;
+  setHighlightRegex: (b: boolean) => void;
 
   setFlowStep: (n: number) => void;
   toggleTimeEditable: () => void;
@@ -94,6 +100,8 @@ export const useStore = create<AppState>((set, get) => ({
   activeRowId: null,
   selectedIds: [],
   searchQuery: '',
+  highlightQuery: '',
+  highlightRegex: false,
 
   flowStep: 0,
 
@@ -115,6 +123,16 @@ export const useStore = create<AppState>((set, get) => ({
   setRows: (rows) => {
     const s = get();
     if (!s.doc) return;
+    set({ doc: { ...s.doc, rows }, dirty: true });
+  },
+
+  replaceAll: (find, replacement, regex) => {
+    const s = get();
+    if (!s.doc) return;
+    const rows = s.doc.rows.map((r) => {
+      const text = replaceInText(r.text, find, replacement, regex);
+      return text === r.text ? r : { ...r, text };
+    });
     set({ doc: { ...s.doc, rows }, dirty: true });
   },
 
@@ -178,6 +196,8 @@ export const useStore = create<AppState>((set, get) => ({
     set({ selectedIds: sel.includes(id) ? sel.filter((x) => x !== id) : [...sel, id] });
   },
   setSearch: (q) => set({ searchQuery: q }),
+  setHighlight: (q) => set({ highlightQuery: q }),
+  setHighlightRegex: (b) => set({ highlightRegex: b }),
 
   setFlowStep: (n) => set({ flowStep: n }),
   toggleTimeEditable: () => set({ timeEditable: !get().timeEditable }),
