@@ -11,7 +11,7 @@ A desktop subtitle tool built on Bun + WebView2 (webview-bun), supporting ASS su
 ---
 
 <p align="center">
-  <img src="assets/readme-header.png" alt="subtitle-hit" width="500">
+  <img src="assets/screen-shot.jpg" alt="subtitle-hit" width="500">
 </p>
 
 ## Why this exists
