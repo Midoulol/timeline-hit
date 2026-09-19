@@ -1,3 +1,7 @@
+<p align="right">
+  <img src="assets/readme-header.png" alt="subtitle-hit" width="256">
+</p>
+
 # subtitle-hit
 
 **Subtitle Timing** — A local Japanese-learning subtitle authoring & timing tool.
@@ -5,6 +9,10 @@
 A desktop subtitle tool built on Bun + WebView2 (webview-bun), supporting ASS subtitle import/editing, embedded HEVC video decoding (libmpv), audio spectrum, AI chat (DeepSeek), subtitle style editing, and more.
 
 ---
+
+<p align="center">
+  <img src="assets/readme-header.png" alt="subtitle-hit" width="500">
+</p>
 
 ## Why this exists
 
@@ -59,7 +67,9 @@ Through **subtitle timing** (打轴) and **AI assistance**, the purpose is to ma
 ```bash
 bun install
 bun run build        # vite build + embed assets + compile exe
-# Output: release/SubtitleTool.exe (requires release/libmpv-2.dll + release/ffmpeg)
+# Output: SubtitleTool.exe at the repo root. Ship it with an FFmpeg/ folder holding
+# ffmpeg.exe, ffprobe.exe and libmpv-2.dll — media binaries live in that subfolder so
+# users can't mistake them for the app launcher (see USER-DATA.md for the layout).
 ```
 
 ## Development
